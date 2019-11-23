@@ -60,7 +60,7 @@ namespace Oficina.WindowsForms
             }
 
            var marca = (Marca)marcaComboBox.SelectedItem;
-           modeloComboBox.DataSource = new ModeloRepositorio().GetModelos(marca.Id);
+           modeloComboBox.DataSource = new ModeloRepositorio().GetModelo(marca.Id);
            modeloComboBox.ValueMember = "Nome";
            modeloComboBox.ValueMember = "Id";
            modeloComboBox.SelectedIndex = -1;
