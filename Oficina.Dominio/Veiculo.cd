@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Oficina.Dominio.Veiculo">
+    <Position X="4.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IACAAAAAAAAAAAAAAAAACAAAAEEAAAAAAAgAAAAAAgA=</HashCode>
+      <FileName>Veiculo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cambio" />
+      <Property Name="Modelo" />
+      <Property Name="Cor" />
+      <Property Name="Combustivel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Oficina.Dominio.Modelo">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Modelo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Marca" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Oficina.Dominio.Marca">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Marca.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oficina.Dominio.Cor">
+    <Position X="7.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Cor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Oficina.Dominio.Combustivel">
+    <Position X="1.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAgEAAgAAAQAAAAAAAAAAAAAACAACAAA=</HashCode>
+      <FileName>Combustivel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Oficina.Dominio.Cambio">
+    <Position X="4.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAQAAAAAAAAAEAAAAAAAAAQAAAAAAACAAQAAA=</HashCode>
+      <FileName>Cambio.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
