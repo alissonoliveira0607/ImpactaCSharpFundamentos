@@ -17,10 +17,10 @@ namespace Oficina.Repositorios.SistemaArquivos
         private static string caminhoArquivo = ConfigurationManager.AppSettings["caminhoArquivoVeiculo"];
         private XDocument arquivoXml = XDocument.Load(caminhoArquivo);
 
-        public void Inserir(Veiculo veiculo)
+        public void Inserir<T>(T veiculo) where T : Veiculo
         {
             var registro = new StringWriter();
-            var serializador = new XmlSerializer(typeof(Veiculo));
+            var serializador = new XmlSerializer(typeof(VeiculoPasseio));
 
             serializador.Serialize(registro, veiculo);
 

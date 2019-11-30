@@ -70,15 +70,37 @@ namespace Oficina.WindowsForms
         {
             if (Formulario.Validar(this, veiculoErrorProvider))
             {
-
               
                 GravarVeiculo();
+                MessageBox.Show("Veiculo Cadastrado Com Sucesso");
+                Formulario.Limpar(this);
+                placaMaskedTextBox.Focus();
             }
         }
 
         private void GravarVeiculo()
         {
-           
+            var veiculo = new VeiculoPasseio();
+            veiculo.Ano = Convert.ToInt32(anoMaskedTextBox.Text);
+            veiculo.Cambio = (Cambio)cambioComboBox.SelectedItem;
+            veiculo.Carroceria = Carroceria.Hatch;
+            veiculo.Combustivel = (Combustivel)combustivelComboBox.SelectedItem;
+            veiculo.Cor = (Cor)corComboBox.SelectedItem;
+            veiculo.Modelo = (Modelo)modeloComboBox.SelectedItem;
+            veiculo.Observacao = observacaoGroupBox.Text;
+            veiculo.Placa = placaMaskedTextBox.Text;
+
+
+
+            new VeiculoRepositorio().Inserir(veiculo);
+        }
+
+        private void limparButton_Click(object sender, EventArgs e)
+        {
+
+
+            Formulario.Limpar(this);
+            }
         }
     }
-}
+

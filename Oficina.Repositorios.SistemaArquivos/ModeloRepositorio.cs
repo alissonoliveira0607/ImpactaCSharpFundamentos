@@ -9,11 +9,17 @@ using System.Xml.Linq;
 
 namespace Oficina.Repositorios.SistemaArquivos
 {
-    public class ModeloRepositorio
+    public class ModeloRepositorio : RepositorioBase
     {
-        private XDocument arquivoXml = XDocument.Load(ConfigurationManager.AppSettings["caminhoArquivoModelo"]);
+        private XDocument arquivoXml;
+
+        public ModeloRepositorio() : base("caminhoArquivoModelo")
+        {
+            arquivoXml = XDocument.Load(CaminhoArquivo);
+        }
+
         //a classe XDocument server para manipular arquivos xml
-        
+
 
         public List<Modelo> GetModelo(int marcaId)
         {

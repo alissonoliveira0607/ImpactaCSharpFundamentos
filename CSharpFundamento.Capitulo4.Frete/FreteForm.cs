@@ -38,7 +38,7 @@ namespace CSharpFundamento.Capitulo4.Frete
 
             if (erros.Count == 0)
             {
-                calcular();
+                Calcular();
             }
             else
             {
@@ -48,7 +48,7 @@ namespace CSharpFundamento.Capitulo4.Frete
             }
         }
 
-        private void calcular()
+        private void Calcular()
         {
             var percentualFrete = 0m;
             var valor = Convert.ToDecimal(valorTextBox.Text);

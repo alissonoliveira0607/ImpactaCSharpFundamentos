@@ -9,17 +9,25 @@ using System.Threading.Tasks;
 
 namespace Oficina.Repositorios.SistemaArquivos
 {
-    public class MarcaRepositorios
+    public class MarcaRepositorios : RepositorioBase
     {
-        private string caminhoArquivo = ConfigurationManager.AppSettings["caminhoArquivoMarca"];
+        //private string caminhoArquivo = ConfigurationManager.AppSettings[RepositorioBase()];
 
+        //ctor criar contrustor
+        public MarcaRepositorios() : base("caminhoArquivoMarca")
+        {
+        }
+
+
+
+        //ToDo: OO - Polimorfismo por sobrecarga.
         public List<Marca> GetMarca()
         {
 
             var Marcas = new List<Marca>();
 
             //para cada linha em meu arquivo de texto execute essa ação            
-            foreach (var linha in File.ReadAllLines(caminhoArquivo))
+            foreach (var linha in File.ReadAllLines(CaminhoArquivo))
             {
 
                 if (string.IsNullOrEmpty(linha))
@@ -45,7 +53,7 @@ namespace Oficina.Repositorios.SistemaArquivos
             Marca Marca = null;
 
 
-            foreach (var linha in File.ReadAllLines(caminhoArquivo))
+            foreach (var linha in File.ReadAllLines(CaminhoArquivo))
             {
 
 

@@ -15,7 +15,7 @@ namespace Oficina.Repositorios.SistemaArquivos.Tests
         [TestMethod()]
         public void InserirTest()
         {
-            var veiculo = new Veiculo();
+            var veiculo = new VeiculoPasseio();
 
             veiculo.Ano = 2014;
             veiculo.Cambio = Cambio.Manual;
